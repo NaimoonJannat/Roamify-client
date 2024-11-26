@@ -1,9 +1,16 @@
+
 import Footer from "../Shared/Footer";
+import Navbar from "../Shared/Navbar";
 
 const Home = () => {
     return (
         <div>
-            <h1 className="text-5xl">Roamify</h1>
+            
+<Navbar/>
+<div className="min-h-96">
+
+</div>
+
             <Footer/>
         </div>
     );
