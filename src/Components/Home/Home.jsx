@@ -1,19 +1,22 @@
+import TopDestination from "./topDestination";
 
 import Footer from "../Shared/Footer";
 import Navbar from "../Shared/Navbar";
 
 const Home = () => {
+
     return (
         <div>
             
 <Navbar/>
-<div className="min-h-96">
 
-</div>
+<h1 className="text-5xl">Roamify</h1>
+<TopDestination></TopDestination>
+
 
             <Footer/>
         </div>
-    );
+    )
 };
 
 export default Home;
