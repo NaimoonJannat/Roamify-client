@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-
+import logo from "../../assets/roamify-logo.png"
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -46,7 +46,9 @@ const Navbar = () => {
               isScrolled ? "text-[#1E2A47]" : "text-white"
             }`}
           >
-            <Link to="/">Roamify</Link>
+            <Link to="/">
+            <img src={logo} alt="" className="w-40" />
+            </Link>
           </div>
 
          
