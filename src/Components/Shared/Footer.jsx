@@ -2,7 +2,7 @@
 import { FaPhoneAlt } from "react-icons/fa";
 import { IoMailOpenOutline } from "react-icons/io5";
 import { MdOutlineAddLocationAlt } from "react-icons/md";
-
+import logo from "../../assets/roamify-logo.png"
 const Footer = () => {
   return (
     <footer className="bg-blue-900 mt-24 footer max-w-1400px mx-auto text-white py-10">
@@ -47,7 +47,7 @@ const Footer = () => {
      
           <div className="lg:space-y-4 lg:grid gap-2 w-[90%] mx-auto grid-cols-3 space-y-8 mt-12">
             <div>
-            <h2 className="text-2xl font-bold">Roamify</h2>
+            <h2 className="text-2xl font-bold"><img src={logo} alt="" className="w-40" /></h2>
             <p>
               Quisque imperdiet sapien porttitor the bibendum. Sellesque the
               commodo erat acar accumsa lobortis, enim diam the nesuen.
