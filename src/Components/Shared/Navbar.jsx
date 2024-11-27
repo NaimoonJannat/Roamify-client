@@ -11,7 +11,7 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
+      if (window.scrollY > 100) {
         setIsScrolled(true);
       } else {
         setIsScrolled(false);
@@ -35,15 +35,15 @@ const Navbar = () => {
   return (
     <>
       <nav
-        className={`sticky top-0 left-0 w-full z-50 transition-all duration-300 ${
-          isScrolled ? "bg-white shadow-lg" : "bg-transparent border-b-gray-600 border"
+        className={`absolute text-white top-0 left-0 w-full z-50 transition-all duration-300 ${
+          isScrolled ?  "sticky transition-all duration-500 ease-in-out bg-white shadow-lg" : "transition-all duration-500 ease-in-out bg-transparent border-b-gray-500 border"
         }`}
       >
         <div className="max-w-[1500px] mx-auto px-6 sm:px-8 lg:px-12 flex items-center justify-between h-20">
     
           <div
             className={`text-2xl font-bold ${
-              isScrolled ? "text-[#1E2A47]" : "text-black"
+              isScrolled ? "text-[#1E2A47]" : "text-white"
             }`}
           >
             <Link to="/">Roamify</Link>
@@ -55,8 +55,8 @@ const Navbar = () => {
               <Link
                 key={item.path}
                 to={item.path}
-                className={`transition-all duration-300 ease-in-out transform hover:scale-105 ${
-                  isScrolled ? "text-[#4A4A4A]" : "text-black"
+                className={`transition-all duration-300 ease-in-out transform hover:scale-105 hover:text-[#3fd0f1] ${
+                  isScrolled ? "text-[#4A4A4A]" : "text-white"
                 }`}
               >
                 {item.pathname}
