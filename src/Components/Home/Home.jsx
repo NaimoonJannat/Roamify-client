@@ -1,6 +1,7 @@
 
 import Banner1 from "./Banners/Banner1";
 import ParallaxBanner from "./Banners/ParallaxBanner";
+import VideoBanner from "./Banners/VideoBanner";
 import TopDestination from "./TopDestination";
 import TravelAgency from "./TravelAgency";
 
@@ -15,6 +16,7 @@ const Home = () => {
             <div className="space-y-40 w-full md:w-11/12 lg:w-4/5 mx-auto">
             <TopDestination />
             </div>
+            <VideoBanner />
         </div>
     );
 };
