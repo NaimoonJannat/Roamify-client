@@ -1,24 +1,36 @@
+import React, { useState, useEffect } from "react";
 import AwesomeSlider from "react-awesome-slider";
 import "react-awesome-slider/dist/styles.css";
-import img1 from "../../../assets/eiffel2.jpg";
-import img2 from "../../../assets/collos2.jpg";
-import img3 from "../../../assets/beach2.jpg";
 
 const Banner1 = () => {
   const sliderContent = [
     {
-      image: img1,
+      image: "https://i.ibb.co.com/Bq0s004/eiffel2.jpg",
       text: "EXPLORE THE WORLD  WITH ROAMIFY",
     },
     {
-      image: img2,
+      image: "https://i.ibb.co.com/0stvZd6/collos2.jpg",
       text: "EXPLORE ROME WITH ROAMIFY",
     },
     {
-      image: img3,
+      image: "https://i.ibb.co.com/DDrPgqL/beach2.jpg",
       text: "DISCOVER THE WORLD WITH OUR GUIDE",
     },
   ];
+
+  // State to track the current slide
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  // Autoscroll logic using useEffect
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) =>
+        prevIndex === sliderContent.length - 1 ? 0 : prevIndex + 1
+      );
+    }, 3000); // Change slide every 3 seconds
+
+    return () => clearInterval(interval); // Cleanup interval on component unmount
+  }, [sliderContent.length]);
 
   return (
     <div className="relative h-screen">
@@ -26,12 +38,13 @@ const Banner1 = () => {
       <AwesomeSlider
         className="h-full"
         style={{
-          overflow: "hidden", 
+          overflow: "hidden",
         }}
+        selected={currentIndex} // Change slide based on currentIndex
       >
         {sliderContent.map((slide, index) => (
           <div key={index} className="relative h-full w-full">
-           
+            {/* Background Image */}
             <div
               className="absolute inset-0 w-full h-full bg-cover bg-center"
               style={{ backgroundImage: `url(${slide.image})` }}
@@ -49,7 +62,7 @@ const Banner1 = () => {
 
       {/* Search Bar */}
       <div
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10 w-[90%] max-w-4xl bg-white shadow-lg rounded-lg p-4"
+        className="absolute hidden md:block bottom-8 left-1/2 transform -translate-x-1/2 z-10 w-[90%] max-w-4xl bg-white shadow-lg rounded-lg p-4"
       >
         <form className="flex flex-wrap items-center gap-4">
           <input
