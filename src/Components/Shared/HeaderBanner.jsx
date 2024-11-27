@@ -1,0 +1,24 @@
+import React from "react";
+
+const HeaderBanner = ({ img, title, subtitle }) => {
+  const defaultImg = "https://i.ibb.co.com/G2rNmDg/beach3.jpg"; 
+
+  return (
+    <div
+      className="relative w-full h-72 md:h-96 bg-cover bg-center flex items-center p-10 text-white"
+      style={{
+        backgroundImage: `url(${img || defaultImg})`,
+      }}
+    >
+      <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+      <div className="z-10 text-left">
+        <h2 className="text-3xl md:text-5xl font-bold uppercase">{title}</h2>
+        {subtitle && (
+          <p className="mt-2 text-lg md:text-xl font-medium">{subtitle}</p>
+        )}
+      </div>
+    </div>
+  );
+};
+
+export default HeaderBanner;
