@@ -1,9 +1,8 @@
-import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
-import DestinationCard from "./destinationCard";
+import DestinationCard from "./DestinationCard";
 
 const TopDestination = () => {
   const destinations = [
@@ -25,7 +24,7 @@ const TopDestination = () => {
   ];
 
   return (
-    <div className="max-w-[1200px] mx-auto">
+    <div className=" mx-auto">
       <h6 className="text-gray-500">Top Destination</h6>
       <h1 className="text-4xl font-bold mb-6">Popular Destinations</h1>
       <Swiper
