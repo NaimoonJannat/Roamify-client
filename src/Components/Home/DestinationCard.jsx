@@ -2,7 +2,7 @@ import { useState } from "react";
 
 const DestinationCard = ({ destination }) => {
   const [isHovered, setIsHovered] = useState(false);
-
+  const { image, name } = destination;
   return (
     <div
       className="w-[350px] h-[500px] relative rounded-lg overflow-hidden shadow-lg"
