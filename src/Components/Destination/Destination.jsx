@@ -16,7 +16,7 @@ const Destination = () => {
                 {loading && <Loader></Loader>}
                 {error && <p className="text-red-500">{error}</p>}
                 {!loading && !error && (
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mx-auto justify-center items-center">
                         {destinations.map((destination) => (
                             <SingleDestination destination={destination} key={destination.id} />
                         ))}
