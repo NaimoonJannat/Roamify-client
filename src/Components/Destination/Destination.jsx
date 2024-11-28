@@ -1,3 +1,4 @@
+import Loader from "../Loader/Loader";
 import HeaderBanner from "../Shared/HeaderBanner";
 
 const Destination = () => {
