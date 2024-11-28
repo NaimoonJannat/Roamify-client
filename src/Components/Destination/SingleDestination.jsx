@@ -7,14 +7,14 @@ const SingleDestination = ({ destination }) => {
 
   return (
     <div
-      className="w-[350px] h-[500px] relative rounded-lg overflow-hidden shadow-lg"
+      className="md:w-[350px] h-[300px] md:h-[500px] relative rounded-lg overflow-hidden shadow-lg"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
       {/* Discount Label */}
-      <div className="absolute top-[-20px] right-4 origin-bottom-right transform -rotate-90 bg-blue-500 text-white text-sm font-semibold py-2 px-4 z-20">
+      {/* <div className="absolute top-[-20px] right-4 origin-bottom-right transform -rotate-90 bg-blue-500 text-white text-sm font-semibold py-2 px-4 z-20">
         20% OFF
-      </div>
+      </div> */}
 
       {/* Image */}
       <img
@@ -32,7 +32,7 @@ const SingleDestination = ({ destination }) => {
         } left-4 transition-all duration-500 z-20`}
       >
         <div className="flex justify-center items-center">
-        <IoLocationOutline className="text-white font-bold" />
+        <IoLocationOutline className="text-white font-bold text-xl" />
         <p className="text-white font-bold text-xl relative">
           {destination.country}
         </p>
