@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { CiClock1, CiClock2 } from "react-icons/ci";
 import { FaRegClock } from "react-icons/fa";
 import { FaLocationPin } from "react-icons/fa6";
 import { MdPeople } from "react-icons/md";
