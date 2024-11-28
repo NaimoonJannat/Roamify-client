@@ -32,7 +32,7 @@ const SingleDestination = ({ destination }) => {
         } left-4 transition-all duration-500 z-20`}
       >
         <div className="flex justify-center items-center">
-        <IoLocationOutline className="text-white font-bold" />
+        <IoLocationOutline className="text-white font-bold text-xl" />
         <p className="text-white font-bold text-xl relative">
           {destination.country}
         </p>

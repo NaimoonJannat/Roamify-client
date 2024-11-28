@@ -1,7 +1,7 @@
 import Banner1 from "./Banners/Banner1";
 import ParallaxBanner from "./Banners/ParallaxBanner";
 import VideoBanner from "./Banners/VideoBanner";
-import PopularTours from "./popularTours";
+import PopularTours from "./PopularTours";
 import TopDestination from "./topDestination";
 import TravelAgency from "./TravelAgency";
 
