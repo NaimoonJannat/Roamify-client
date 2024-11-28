@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { FaArrowRightLong } from "react-icons/fa6";
 import { IoLocationOutline } from "react-icons/io5";
 
 const SingleDestination = ({ destination }) => {
@@ -17,7 +18,7 @@ const SingleDestination = ({ destination }) => {
 
       {/* Image */}
       <img
-        src={destination.image}
+        src={destination.image_url}
         alt={destination.name}
         className={`w-full h-full object-cover transition-transform duration-500 ease-in-out ${
           isHovered ? "scale-110" : ""
@@ -33,7 +34,7 @@ const SingleDestination = ({ destination }) => {
         <div className="flex justify-center items-center">
         <IoLocationOutline className="text-white font-bold" />
         <p className="text-white font-bold text-xl relative">
-          {destination.name}
+          {destination.country}
         </p>
         </div>
         <div
@@ -56,10 +57,11 @@ const SingleDestination = ({ destination }) => {
           isHovered ? "opacity-100" : "opacity-0"
         }`}
       >
-        <p className="text-white text-sm font-medium">Tour Packages</p>
-        <button className="text-white font-medium hover:underline">
-          Explore
-        </button>
+        <p className="text-white text-sm font-medium">Visit {destination.best_time_to_visit}</p>
+        <div className="flex justify-center items-center gap-2 text-white font-medium hover:underline">
+          Explore <FaArrowRightLong className="text-white" />
+          
+        </div>
       </div>
     </div>
   );
