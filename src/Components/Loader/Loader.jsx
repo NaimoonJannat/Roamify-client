@@ -1,7 +1,7 @@
 import "./Loader.css"
 const Loader = () => {
     return (
-<div  className="w-1/2 mx-auto flex justify-center items center">
+<div  className="w-full md:w-1/2 mx-auto flex justify-center items center">
 <div className="wrapper">
   <div className="cloud">
     <div className="cloud_left"></div>

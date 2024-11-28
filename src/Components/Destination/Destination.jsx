@@ -5,7 +5,7 @@ const Destination = () => {
     return (
         <div>
             <HeaderBanner title="Find Your Destination" subtitle="Explore The Destination You Need"></HeaderBanner>
-            <Loader></Loader>
+            
         </div>
     );
 };
