@@ -1,13 +1,13 @@
 import { useContext, useState } from "react";
 import { TbLogin2 } from "react-icons/tb";
 import { AuthContext } from "../provider/AuthProvider";
-import { FaKey, FaUnlockAlt, FaUser, FaGoogle } from "react-icons/fa";
+import { FaKey, FaUnlockAlt, FaUser, FaGoogle, FaHome } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import toast, { Toaster } from "react-hot-toast";
 
 const Login = () => {
   const [loading, setLoading] = useState(false);
-  const { emailLogin, googleLogin } = useContext(AuthContext); 
+  const { emailLogin, googleLogin } = useContext(AuthContext);
 
   const loginHandle = async (e) => {
     e.preventDefault();
@@ -56,13 +56,23 @@ const Login = () => {
       <Toaster />
       <div className="flex items-center justify-center bg-gray-50 pb-20">
         <div className="w-full max-w-[700px] mt-24 pb-8 space-y-6 bg-white shadow-lg">
-          <div className="flex w-full items-center font-semibold text-lg gap-4 text-white px-8 py-2 bg-[#2b97a3]">
-            <h1 className="text-3xl">
-              <TbLogin2 />
-            </h1>
-            <h1>Sign in now</h1>
+          {/* Header Section */}
+          <div className="flex w-full items-center justify-between font-semibold text-lg gap-4 text-white px-8 py-2 bg-[#2b97a3]">
+            <div className="flex items-center gap-4">
+              <h1 className="text-3xl">
+                <TbLogin2 />
+              </h1>
+              <h1>Sign in now</h1>
+            </div>
+            <Link
+              to="/"
+              className="flex items-center gap-2 text-sm text-white hover:text-gray-200 transition"
+            >
+              <FaHome className="text-lg" /> Go to Home
+            </Link>
           </div>
 
+          {/* Login Form */}
           <div className="md:flex">
             <form onSubmit={loginHandle} className="mt-8 space-y-6 px-8">
               <div className="rounded-md shadow-sm space-y-4">
@@ -128,6 +138,7 @@ const Login = () => {
               </div>
             </form>
 
+            {/* Additional Content */}
             <div className="mt-6 px-8">
               <h1 className="font-semibold ">NEW HERE?</h1>
 
