@@ -5,6 +5,11 @@ import Destination from "../Components/Destination/Destination";
 import Registar from "../authantication/Registar";
 import Login from "../authantication/Login";
 import Contact from "../Components/contact/Contact";
+import AdminDashboard from "../Components/dashboard/adminDashboard/AdminDashboard";
+import Overview from "../Components/dashboard/adminDashboard/Overview";
+import Package from "../Components/dashboard/adminDashboard/Package";
+import Booking from "../Components/dashboard/adminDashboard/Booking";
+import User from "../Components/dashboard/adminDashboard/User";
 
 const router = createBrowserRouter([ 
     { 
@@ -20,22 +25,51 @@ const router = createBrowserRouter([
             path:"/destinations",
             element:<Destination></Destination>
         },
-        {
-            path:'/registar',
-            element: <Registar/>
-
-        },
-        {
-            path:'/login',
-            element: <Login/>
-        },
+        
         {
             path:'/contact',
             element: <Contact/>
         }
 
     ] 
-    }, 
+    },
+    {
+        path:'/admin',
+        element:<AdminDashboard/>,
+        children: [
+{
+path:'/admin',
+element:<Overview/>
+
+},
+{
+path:'/admin/package',
+element:<Package/>
+
+},
+{
+path:'/admin/booking',
+element:<Booking/>
+
+},
+{
+path:'/admin/users',
+element:<User/>
+
+},
+
+
+        ]
+    } ,
+    {
+        path:'/registar',
+        element: <Registar/>
+
+    },
+    {
+        path:'/login',
+        element: <Login/>
+    },
    ]); 
    
 export default router;
