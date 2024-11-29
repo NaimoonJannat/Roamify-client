@@ -1,9 +1,8 @@
-import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
-import DestinationCard from "./destinationCard";
+import DestinationCard from "./DestinationCard";
 
 const TopDestination = () => {
   const destinations = [
@@ -22,16 +21,24 @@ const TopDestination = () => {
       name: "Sylhet, Bangladesh",
       image: "https://i.ibb.co/BB7rM6X/photo-1546412414-e1885259563a.jpg",
     },
+    {
+      id: 4,
+      name: "Coxs bazar, Bangladesh",
+      image: "https://i.ibb.co/BB7rM6X/photo-1546412414-e1885259563a.jpg",
+    },
   ];
 
   return (
     <div className="max-w-[1200px] mx-auto">
-      <h6 className="text-gray-500">Top Destination</h6>
-      <h1 className="text-4xl font-bold mb-6">Popular Destinations</h1>
+      <h3 className="text-primary text-sm font-semibold uppercase mb-2">
+        Top Destination
+      </h3>
+      <h1 className="text-4xl md:text-5xl max-w-md font-bold text-gray-800 mb-4">
+        Popular<span className="text-primary">Destinations</span>
+      </h1>
       <Swiper
         slidesPerView={3}
         spaceBetween={30}
-        centeredSlides={true}
         pagination={{
           clickable: true,
         }}

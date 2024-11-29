@@ -2,7 +2,7 @@
 
 const TravelAgency = () => {
   return (
-    <section className="container mx-auto px-8 mt-10 border-4 border-red-400">
+    <section className="container mx-auto px-8 mt-10">
       <div className="flex flex-col md:flex-row items-center justify-center md:justify-between gap-10">
         {/* Left Content */}
         <div className="w-full md:w-1/2">
