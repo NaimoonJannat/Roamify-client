@@ -1,16 +1,19 @@
 import { useContext, useState } from "react";
-import { FaEnvelope, FaLock, FaRegUser, FaUpload, FaUserAlt } from "react-icons/fa";
+import { FaEnvelope, FaHome, FaLock, FaRegUser, FaUpload, FaUserAlt } from "react-icons/fa";
 import { TbUserPlus } from "react-icons/tb";
 import { Link } from "react-router-dom";
 import HeaderBanner from "../Components/Shared/HeaderBanner";
 import { AuthContext } from "../provider/AuthProvider";
 import toast, { Toaster } from "react-hot-toast";
+import axios from "axios";
 
 
 const Registar = () => {
     const [loading, setLoading] = useState(false)
     const {createUser, user, updateUser} = useContext(AuthContext)
-    
+    const saveUser = async(userData)=>{
+        await axios.post('http://localhost:5000/users', userData)
+        }
     const registarHandle = async(e) => {
         e.preventDefault();
         setLoading(true)
@@ -25,11 +28,19 @@ const Registar = () => {
     const result = await createUser(email, password);
  await updateUser(name);
 
+
+
     console.log(result?.user, 'wow');
 if(result?.user?.accessToken
 ){
    
     
+    const userData = {
+        name : name,
+        email : email,
+        userRole: 'user'
+    }
+saveUser(userData)
 
     toast.success('Registar susccessfully')
     setLoading(false)
@@ -71,8 +82,14 @@ if(result?.user?.accessToken
                 <div className='flex w-full items-center font-semibold text-lg gap-4 text-white px-8 py-2 bg-[#2b97a3]'>
                     <h1 className='text-3xl'><TbUserPlus /></h1>
                     <h1 className=''>Create an Account</h1>
+                    <Link
+              to="/"
+              className="flex ml-auto items-center gap-2 text-sm text-white hover:text-gray-200 transition"
+            >
+              <FaHome className="text-lg" /> Go to Home
+            </Link>
                 </div>
-
+              
                 <div className='md:flex'>
                     <form onSubmit={registarHandle} className="mt-8 space-y-6 px-8 w-full">
                         <div className="rounded-md shadow-sm space-y-4">
