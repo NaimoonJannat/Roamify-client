@@ -1,8 +1,8 @@
 import Banner1 from "./Banners/Banner1";
 import ParallaxBanner from "./Banners/ParallaxBanner";
 import VideoBanner from "./Banners/VideoBanner";
-import PopularTours from "./PopularTours";
-import TopDestination from "./TopDestination";
+import PopularTours from "./popularTours";
+import TopDestination from "./topDestination";
 import TravelAgency from "./TravelAgency";
 
 const Home = () => {

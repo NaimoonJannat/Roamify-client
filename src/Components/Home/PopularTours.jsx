@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { CiClock1, CiClock2 } from "react-icons/ci";
 import { FaRegClock } from "react-icons/fa";
 import { FaLocationPin } from "react-icons/fa6";
 import { MdPeople } from "react-icons/md";
@@ -207,8 +206,6 @@ const PopularTours = () => {
             Greece
           </div>
         </div>
-
-        {/* Fifth Card (1 row, 1 column) */}
         <div
           className="relative rounded-lg overflow-hidden shadow-lg"
           onMouseEnter={() => setHoveredIndex(4)}
