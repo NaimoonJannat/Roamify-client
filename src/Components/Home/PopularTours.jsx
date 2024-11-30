@@ -206,8 +206,6 @@ const PopularTours = () => {
             Greece
           </div>
         </div>
-
-        {/* Fifth Card (1 row, 1 column) */}
         <div
           className="relative rounded-lg overflow-hidden shadow-lg"
           onMouseEnter={() => setHoveredIndex(4)}
