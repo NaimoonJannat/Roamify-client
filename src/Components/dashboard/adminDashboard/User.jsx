@@ -1,11 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import UserTable from './UserTable';
 
 const User = () => {
     return (
-        <div className="text-center bg-blue-900">
+        <div className="text-center  bg-blue-900">
         
-        <div className="md:flex px-6 py-8 items-center justify-between">
+        <div className="md:flex px-6 pb-28 pt-8 items-center justify-between">
             <h1 className="text-3xl  font-bold text-white">User Mangement</h1>
 
             <div className=" text-white">
@@ -15,8 +16,15 @@ const User = () => {
           <li className="list-disc">    <Link to={'/admin/booking'}>Booking  </Link></li>
               </ul>
             </div>
-        </div>
+
+
         
+        </div>
+        {/* user table */}
+
+        <div className=''>
+            <UserTable/>
+        </div>
         </div>
     );
 };
