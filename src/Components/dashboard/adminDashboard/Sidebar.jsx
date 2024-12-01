@@ -33,7 +33,7 @@ const Sidebar = ({ closeSidebar }) => {
     const location = useLocation();
 
     return (
-        <div className="py-4 bg-white min-h-screen  overflow-y-scroll shadow-lg">
+        <div className="py-4 bg-white min-h-screen  overflow-y-scroll  h-full shadow-lg">
             {/* Profile */}
             <div className="flex p-4 border-b items-center gap-6">
                 <FaUser className="text-4xl text-gray-800" />
