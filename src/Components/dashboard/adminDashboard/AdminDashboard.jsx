@@ -11,26 +11,23 @@ const AdminDashboard = () => {
     };
 
     return (
-        <div className="grid lg:grid-cols-4">
-        
-         
+        <div className="flex h-screen">
             {/* Sidebar */}
             <div
-                className={`fixed top-0 left-0 h-full bg-white  transform transition-transform duration-300 ease-out z-20 ${
+                className={`fixed top-0 w-[75%] lg:w-[30%] left-0 h-full  bg-white transform transition-transform duration-300 ease-out z-20 ${
                     isSidebarOpen ? "translate-x-0" : "-translate-x-full"
-                } lg:translate-x-0 lg:static lg:col-span-1`}
+                } lg:translate-x-0 lg:static`}
             >
                 <Sidebar closeSidebar={toggleSidebar} />
             </div>
 
-            <div className="sticky col-span-3 top-0 z-10">
-                <AdminNavbar toggleSidebar={toggleSidebar} />
-
-                <Outlet/>
-            </div>
-
-
+            {/* Main Content */}
            
+
+            <div className="w-full overflow-y-auto p-4 ">
+            <AdminNavbar toggleSidebar={toggleSidebar} />
+                    <Outlet />
+                </div>
         </div>
     );
 };
